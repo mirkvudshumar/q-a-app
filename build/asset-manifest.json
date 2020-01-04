@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/qa-app/static/css/main.bfc4de77.chunk.css",
+    "main.js": "/qa-app/static/js/main.f85713a1.chunk.js",
+    "main.js.map": "/qa-app/static/js/main.f85713a1.chunk.js.map",
+    "runtime-main.js": "/qa-app/static/js/runtime-main.96d2f731.js",
+    "runtime-main.js.map": "/qa-app/static/js/runtime-main.96d2f731.js.map",
+    "static/js/2.cb75a2eb.chunk.js": "/qa-app/static/js/2.cb75a2eb.chunk.js",
+    "static/js/2.cb75a2eb.chunk.js.map": "/qa-app/static/js/2.cb75a2eb.chunk.js.map",
+    "index.html": "/qa-app/index.html",
+    "precache-manifest.a846bfcd47902bfc04425005bb8727ee.js": "/qa-app/precache-manifest.a846bfcd47902bfc04425005bb8727ee.js",
+    "service-worker.js": "/qa-app/service-worker.js",
+    "static/css/main.bfc4de77.chunk.css.map": "/qa-app/static/css/main.bfc4de77.chunk.css.map"
+  }
+}
