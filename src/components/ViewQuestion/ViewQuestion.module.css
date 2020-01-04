@@ -1,0 +1,17 @@
+ul {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin:  10px 0;
+	padding: 2px 0 10px 0;
+	border: 0.5px solid #DDD;
+	font-size: 0.7em;
+}
+
+li {
+	flex-direction: column;
+	list-style: none;
+}
+
+
+	

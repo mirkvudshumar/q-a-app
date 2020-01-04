@@ -1,0 +1,28 @@
+h2 {
+	display: relative;
+}
+
+label {	
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+	font-size: 0.8em;
+}
+
+input {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin: 10px 0;
+	padding: 5px;
+	font-size: 0.7em;
+}
+
+textarea {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin: 10px 0;
+	padding: 5px;
+	font-size: 0.8em;
+}

@@ -1,0 +1,49 @@
+li {
+	display: flex;
+	flex-direction: row;
+	margin: 4px;
+	cursor: pointer;
+}
+
+.qaSection {
+	display: flex;
+	flex-direction: column;
+	width: 80%;	
+}
+
+.buttonsSection {
+	display: flex;
+	flex-direction: row;
+	align-content: flex-end;
+	justify-content: flex-end;
+	align-content: flex-start;
+	width: 20%;
+}
+
+p {
+	flex-direction: column;
+	width: 60%;
+	margin: 5px 0 5px 2px;
+}
+
+li p:first-child {
+	float: left;
+	font-weight: bold;
+}
+
+li button {
+	flex-direction: row;
+	min-width: 6%;
+	margin: 5px;
+	padding: 1px;
+	background-color: transparent;
+	font-size: 1em;
+}
+
+.edit {
+	color: #41b2be;
+}
+
+.remove {
+	color: #c5463a;
+}
