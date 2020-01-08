@@ -1,9 +1,10 @@
 import React from 'react';
-import './ViewQuestion.module.css';
+
+import './ViewQuestions.module.css';
 import Aux from '../../hoc/Aux';
 import QaElement from './QaElement/QaElement';
 
-const viewQuestion = (props) => {
+const viewQuestions = (props) => {
 	let questionList = props.qa.map((e, index) => {
 		return (
 			<QaElement 
@@ -14,10 +15,10 @@ const viewQuestion = (props) => {
 				show={e.show}
 				removeQuestion={() => props.removeQuestion(e.id)}
 			/>
-		)
-	})
+		);
+	});
 	let noQuestionsStyle = null;
-	if(props.qa.length === 0) {
+	if (props.qa.length === 0) {
 		questionList = <p>No questions yet</p>
 		noQuestionsStyle = {backgroundColor: '#ffccd2'};
 	}
@@ -44,4 +45,4 @@ const viewQuestion = (props) => {
 	)
 }
 
-export default viewQuestion;
+export default viewQuestions;

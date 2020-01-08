@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+
 import './QaTool.css';
-import ViewQuestion from '../../components/ViewQuestion/ViewQuestion';
+import ViewQuestions from '../../components/ViewQuestions/ViewQuestions';
 import CreateQuestion from '../../components/CreateQuestion/CreateQuestion';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
@@ -10,6 +11,7 @@ class QaTool extends Component {
 	}	
 	
 	handleSubmit = (event) => {
+		event.preventDefault();
 		const questionsNumber = this.state.qaPairs.length;
 		const input =  {
 			id: questionsNumber,
@@ -18,8 +20,7 @@ class QaTool extends Component {
 			show: false
 		};
 		const updatedState = [...this.state.qaPairs, input];
-		this.setState({qaPairs: updatedState})
-		event.preventDefault();
+		this.setState({qaPairs: updatedState});
 	}
 
 	showAnswer = (id) => {
@@ -32,7 +33,7 @@ class QaTool extends Component {
 
 	sortQuestions = () => {
 		let qaList = [...this.state.qaPairs];
-		qaList = qaList.sort((a, b) => (a.question.toLowerCase() > b.question.toLowerCase()) ? 1 : -1)
+		qaList = qaList.sort((a, b) => (a.question.toLowerCase() > b.question.toLowerCase()) ? 1 : -1);
 		this.setState({qaPairs: qaList});
 	}
 
@@ -47,16 +48,20 @@ class QaTool extends Component {
 		this.setState({qaPairs: updatedState});
 	}
 
+	editQuestion = (id) => {
+
+	}
+
 	render() {
 		return (
 			<div className="content">
-				<h1>The awesome Q/A tool</h1>
+				<h1>Q/A tool</h1>
 				<div className="wrapper">
 					<aside>
-						<Sidebar qa={this.state.qaPairs}/>
+						<Sidebar qaPairs={this.state.qaPairs}/>
 					</aside>
 					<main>
-						<ViewQuestion 
+						<ViewQuestions 
 							qa={this.state.qaPairs} 
 							clicked={this.showAnswer} 
 							removeAll={this.removeAll}

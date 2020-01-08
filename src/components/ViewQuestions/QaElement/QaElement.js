@@ -1,8 +1,9 @@
 import React from 'react';
+
 import styles from './QaElement.module.css';
 
 const qaElement = (props) => {
-	let answer = props.show === true ? props.answer : null;
+	let answer = props.show ? props.answer : null;
 	return(
 			<li key={props.id} >
 				<div className={styles.qaSection}>

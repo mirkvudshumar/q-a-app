@@ -1,7 +1,8 @@
 .content {
-	width: 80%;
+	width: 100%;
 	margin: auto;
 	font-family: 'Roboto', sans-serif;
+	overflow-wrap: break-word;
 }
 .wrapper {
 	display: flex;
@@ -92,6 +93,12 @@ button {
 	text-align: center;
 	font-size: 0.9em;
 	font-weight: normal;
+}
+
+@media (max-width: 600px) {
+	.tooltip::before {
+		left: 12%;
+	}
 }
 
 .tooltip:hover::before, .tooltip:hover::after {
