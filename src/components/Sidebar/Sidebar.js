@@ -1,5 +1,7 @@
 import React from 'react';
 
+import propTypes from 'prop-types';
+
 const sidebar = (props) => {
 	let sideText = null;
 
@@ -16,5 +18,9 @@ const sidebar = (props) => {
 
 	return sideText;
 }
+
+sidebar.propTypes = {
+	submit: propTypes.func
+};
 
 export default sidebar;

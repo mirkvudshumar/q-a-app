@@ -1,5 +1,6 @@
 import React from 'react';
 
+import propTypes from 'prop-types';
 import './EditQuestion.module.css';
 import Aux from '../../hoc/Aux';
 import Tooltip from '../UI/Tooltip/Tooltip';
@@ -34,5 +35,13 @@ const editQuestion = (props) => {
 		</Aux>
 	)
 }
+
+
+editQuestion.propTypes = {
+	editedValues: propTypes.object,
+	show: propTypes.bool.isRequired,
+	editInput: propTypes.func.isRequired,	
+	onSubmitEdit: propTypes.func.isRequired
+};
 
 export default editQuestion;

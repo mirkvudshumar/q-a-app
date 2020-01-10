@@ -1,5 +1,6 @@
 import React from 'react';
 
+import propTypes from 'prop-types';
 import './ViewQuestions.module.css';
 import Aux from '../../hoc/Aux';
 import Tooltip from '../UI/Tooltip/Tooltip';
@@ -12,10 +13,7 @@ const viewQuestions = (props) => {
 	let questionList = props.qaPairs.map((e, index) => {
 		return (
 			<QaElement 
-				id={e.id}
-				question={e.question}
-				answer={e.answer}
-				show={e.show}
+				qaPair={e}
 				showAnswer={() => props.showAnswer(e.id)}
 				removeQuestion={() => props.removeQuestion(e.id)}
 				editQuestion={() => props.editQuestion(e.id)}
@@ -47,5 +45,14 @@ const viewQuestions = (props) => {
 		</Aux>
 	)
 }
+
+viewQuestions.propTypes = {
+	qaPairs: propTypes.array.isRequired,
+	removeAll: propTypes.func.isRequired,
+	sortQuestions: propTypes.func.isRequired,
+	showAnswer: propTypes.func.isRequired,
+	removeQuestion: propTypes.func.isRequired,
+	editQuestion: propTypes.func.isRequired,
+};
 
 export default viewQuestions;

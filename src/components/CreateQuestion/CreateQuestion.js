@@ -1,8 +1,10 @@
 import React from 'react';
 
+import propTypes from 'prop-types';
 import './CreateQuestion.module.css';
 import Aux from '../../hoc/Aux';
 import Tooltip from '../UI/Tooltip/Tooltip';
+
 
 const createQuestion = (props) => {			
 	return (
@@ -30,5 +32,9 @@ const createQuestion = (props) => {
 		</Aux>
 	)
 }
+
+createQuestion.propTypes = {
+	qaPairs: propTypes.array
+};
 
 export default createQuestion;
