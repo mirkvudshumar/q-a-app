@@ -2,23 +2,31 @@ import React from 'react';
 
 import './ViewQuestions.module.css';
 import Aux from '../../hoc/Aux';
+import Tooltip from '../UI/Tooltip/Tooltip';
 import QaElement from './QaElement/QaElement';
 
 const viewQuestions = (props) => {
-	let questionList = props.qa.map((e, index) => {
+
+	/* List of questions
+	---------------------------------------------------------------------------*/
+	let questionList = props.qaPairs.map((e, index) => {
 		return (
 			<QaElement 
 				id={e.id}
 				question={e.question}
 				answer={e.answer}
-				clicked={() => props.clicked(e.id)}
 				show={e.show}
+				showAnswer={() => props.showAnswer(e.id)}
 				removeQuestion={() => props.removeQuestion(e.id)}
+				editQuestion={() => props.editQuestion(e.id)}
 			/>
 		);
 	});
+
+	/* No questions entered case
+	---------------------------------------------------------------------------*/
 	let noQuestionsStyle = null;
-	if (props.qa.length === 0) {
+	if (props.qaPairs.length === 0) {
 		questionList = <p>No questions yet</p>
 		noQuestionsStyle = {backgroundColor: '#ffccd2'};
 	}
@@ -27,18 +35,13 @@ const viewQuestions = (props) => {
 		<Aux>
 			<h2>
 				Created questions
-				<span 
-					className="tooltip" 
-					data-tooltip="Here you can find created questions and their answers."
-				> 
-					<p>?</p>
-				</span>
+				<Tooltip infoText="Here you can find created questions and their answers." />
 			</h2>
 			<ul style={noQuestionsStyle}>
 				{questionList}	
 			</ul>
 			<div className="Buttons">
-				<button className="sort" onClick={props.sort}>Sort</button>
+				<button className="sort" onClick={props.sortQuestions}>Sort</button>
 				<button className="removeAll" onClick={props.removeAll}>Remove questions</button>
 			</div>
 		</Aux>

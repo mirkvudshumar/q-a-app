@@ -2,18 +2,14 @@ import React from 'react';
 
 import './CreateQuestion.module.css';
 import Aux from '../../hoc/Aux';
+import Tooltip from '../UI/Tooltip/Tooltip';
 
-const createQuestion = (props) => {
+const createQuestion = (props) => {			
 	return (
 		<Aux>
 			<h2>
 				Create a new question
-				<span 
-					className="tooltip" 
-					data-tooltip="Here you can create new questions and their answers."
-				>
-					<p>?</p>
-				</span>
+				<Tooltip infoText="Here you can create new questions and their answers." />
 			</h2>
 			<form onSubmit={props.submit} autoComplete="off">
 				<label htmlFor="question">Question</label>

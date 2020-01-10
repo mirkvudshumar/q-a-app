@@ -47,3 +47,9 @@ li button {
 .remove {
 	color: #c5463a;
 }
+@media (max-width: 600px) {
+	.edit, .remove{
+		font-size: 1.4em;
+		margin: 0 8px;
+	}
+}

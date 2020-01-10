@@ -72,7 +72,7 @@ button {
 	content: "";
 	opacity: 0;
 	position: relative;
-	left: 3%;
+	left: 12%;
 	top: -15px;
 	border-width: 8px 8px 8px 8px;
 	border-style: solid;
@@ -95,9 +95,9 @@ button {
 	font-weight: normal;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
 	.tooltip::before {
-		left: 12%;
+		left: 3%;
 	}
 }
 

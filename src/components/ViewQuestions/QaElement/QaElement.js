@@ -7,11 +7,11 @@ const qaElement = (props) => {
 	return(
 			<li key={props.id} >
 				<div className={styles.qaSection}>
-					<p onClick={props.clicked}>{props.question}</p>
+					<p onClick={props.showAnswer}>{props.question}</p>
 					<p>{answer}</p>
 				</div>
 				<div className={styles.buttonsSection}>
-					<button className={styles.edit} onClick={props.edit}>
+					<button className={styles.edit} onClick={props.editQuestion}>
 						<i class="fas fa-pen-square"></i>
 					</button>
 					<button className={styles.remove} onClick={props.removeQuestion}>

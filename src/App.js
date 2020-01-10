@@ -3,11 +3,8 @@ import classes from './App.css';
 import QaTool from './containers/QaTool/QaTool'
 
 function App() {
-  return (
-  	<div className={classes.Content}>
-  		<QaTool />
-  	</div>
-  );
+  return <QaTool />;
+
 }
 
 export default App;
